@@ -1,0 +1,44 @@
+.container-fluid{
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.image img{
+    margin: 0 auto;
+    padding-top: 100px;
+    width: 100%;
+}
+#text12{
+    text-align: center;
+}
+
+.et-track-form input {
+
+    font-size: 12px;
+}
+
+    .customer-login {
+        background-position: left top;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .customer-login::after {
+        display: none;
+    }
+
+    .customer-login-block {
+        border-radius: 20px 20px 20px 20px !important;
+        background-color: #F5F5F5;
+        border: 1px solid #EB823B;
+        padding: 30px;
+    }
+
+    input,
+    select {
+        text-align: center !important;
+        text-align-last: center !important;
+        -moz-text-align-last: center !important;
+    }

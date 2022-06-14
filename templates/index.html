@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html class="no-js" lang="en-US">
+
+
+<head>
+    <!-- META TAGS -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=8">
+    <!-- LINK TAGS -->
+    <!-- This site is optimized with the Yoast SEO plugin v18.0 - https://yoast.com/wordpress/plugins/seo/ -->
+    <title>Rate Calculator - Discounted Shipping Cost Calculator - Worldel</title>
+
+    <meta property="article:modified_time" content="2021-10-19T22:39:22+00:00" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <meta name="twitter:label1" content="Est. reading time" />
+    <meta name="twitter:data1" content="2 minutes" />
+    <link rel="stylesheet" href="{%   static  "perbox/style.css"    %}">
+    <link rel="stylesheet" href="{%   static  "css/style.css"    %}">
+    <link rel="stylesheet" href="{%   static  "css/styles.css"    %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{%   static  "favicon_io(1)/android-chrome-192x192.png"    %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{%   static    "favicon_io(1)/favicon-32x32.png"  %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{%   static   "favicon_io(1)/favicon-16x16.png"   %}">
+    <link rel="manifest" href="{%   static    "favicon_io(1)/favicon.ico"  %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    <!-- / Yoast SEO plugin. -->
+</head>
+
+<body class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <a class="navbar-brand text-white" href="#">WORLDEL</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link mask flex-center text-white" href="{% url 'calculator' %}">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'trend' %}">TREND PRODUCTS</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <script>
+    function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            const cookies = document.cookie.split(';');
+            for (let i = 0; i < cookies.length; i++) {
+                const cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+
+    const csrftoken = getCookie('csrftoken');
+</script>
+    <!-- general wrap start -->
+    <div id="gen-wrap">
+        <!-- wrap start -->
+        <div id="wrap" data-navigation="default" data-sidebar-pos="left">
+            <div class="overlay"></div>
+            <div class="page-content-wrap sticky-status-true">
+                <!-- content start -->
+                <div id="et-content" class='content et-clearfix padding-true'>
+                    <div class='container'>
+                        <!-- post start -->
+                        <div id="post-14034" class="post-14034 page type-page status-publish hentry">
+                            <section class="page-content et-clearfix">
+                                <div class="vc_row wpb_row vc_row-fluid vc_column-gap-24 vc-container">
+                                    <div data-animation-delay="0" data-parallax-speed="1.5"
+                                        class="wpb_column vc_column_container vc_col-sm-12">
+                                        <div class="vc_column-inner ">
+                                            <div class="wpb_wrapper">
+                                                <h6 style="font-weight:700;color:#9a9a9a; padding-bottom: 60px;"
+                                                    data-mobile-font="inherit" data-tablet-font="inherit"></h6>
+                                                <h3 style="font-weight:700;color:#fd8c40;" data-mobile-font="18px">Rate
+                                                    Calculator</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vc_row wpb_row vc_row-fluid vc_column-gap-24 vc-container">
+                                    <div data-animation-delay="0" data-parallax-speed="1.5"
+                                        class="wpb_column vc_column_container vc_col-sm-12">
+                                        <div class="vc_column-inner ">
+                                            <div class="wpb_wrapper">
+                                                <h2 style="color: #000000;text-align: center; padding-top: 100px;">
+                                                    WORLDEL
+                                                    provides
+                                                    you the most affordable shipping rates</h2>
+                                                <h6 style="font-size: 20px;text-align: center" class="vc_custom_heading"
+                                                    data-mobile-font="inherit" data-tablet-font="inherit">Save
+                                                    big with discounted
+                                                    shipping rates from China to more than 200 destinations
+                                                    worldwide. Get your shipping address for free and shop online.
+                                                </h6>
+                                                <div class="gap et-clearfix " style="height:20px"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div data-animation-delay="0" data-parallax-speed="1.5"
+                                        class="wpb_column vc_column_container vc_col-sm-12 vc_col-xs-12">
+                                        <div class="vc_column-inner ">
+                                            <div class="wpb_wrapper">
+                                                <meta name="viewport" content="width=device-width, initial-scale=1">
+                                                <div id="input_form" class="row customer-login">
+                                                    <div class="col-12 col-md-6 col-lg-6">
+                                                        <div class="customer-login-block et-track-form et-clearfix">
+                                                            <div class="row">
+                                                                <center>
+                                                                    <h5 class="shipping_calculator_text" id="please">
+                                                                        Please Select
+                                                                        Where Parcel Will Be Shipped To</h5>
+                                                                </center>
+                                                            </div>
+                                                            <div id="1div">
+                                                                <div class="form-group">
+                                                                    <label class="label"><b>Country</b></label>
+                                                                    <select name="country_id" id="country_id1"
+                                                                        class="form-control">
+                                                                        <!--onChange="fillUpState(this.value);"-->
+                                                                        <option value="">Select</option>
+
+                                                                                                                              {% for i in country %}
+                                                                            <option id="bos"
+                                                                                    value="{{ i.country }}">{{ i.country }}</option>
+                                                                        {% endfor %}
+
+                                                                    </select>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-sm-12 col-md-12">
+                                                                        <label class="label"><b>Weight</b></label>
+                                                                        <input onkeyup="share_weight()" type="number" name="weight" id="weight"
+                                                                            step="any" min="0" class="form-control"
+                                                                            placeholder="KG" />
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row" id="volume"
+                                                                    style="text-align: center;display:flex;justify-content: center;">
+                                                                    <div class="col-sm-12 col-md-4"
+                                                                        style="float:left; padding-top: 30px;">
+                                                                        <label class="label"><b>Length</b></label>
+                                                                        <input onkeyup="share_weight()" type="number" name="length" id="length"
+                                                                            value="" step="any" min="0"
+                                                                            placeholder="L-cm">
+                                                                    </div>
+                                                                    <div class="col-sm-12 col-md-4"
+                                                                        style="float:left;padding-top: 30px;">
+                                                                        <label class="label"><b>Width</b></label>
+                                                                        <input onkeyup="share_weight()"  type="number" name="width" id="width"
+                                                                            value="" step="any" min="0"
+                                                                            placeholder="W-cm">
+                                                                    </div>
+                                                                    <div class="col-sm-12 col-md-4"
+                                                                        style="float:left;padding-top: 30px; padding-bottom: 30px;">
+                                                                        <label class="label"><b>Height</b></label>
+                                                                        <input onkeyup="share_weight()" type="number" name="height" id="height"
+                                                                            value="" step="any" min="0"
+                                                                            placeholder="H-cm">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-sm-12 col-md-12"
+                                                                        style="text-align: center;clear:both;">
+                                                                        <label class="label"><b>Dimensional Weight :</b>
+                                                                            <span id="dimentional_label"></span></label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="col-sm-12 col-md-12"
+                                                                        style="text-align: center;">
+                                                                        <label class="label"><b>Chargeable Weight :
+                                                                                <span id="chargeable_label">
+                                                                                </span></b></label>
+                                                                    </div>
+                                                                </div>
+                                                                <p id="text12">....</p>
+                                                                <div class="row">
+                                                                    <div class="col-lg-4">
+                                                                        <div class="request-button"
+                                                                            style="text-align: center;padding-top:10px;clear:both;">
+                                                                            <button type="button" id="check_rate"
+                                                                                onclick="sherzamon()"
+                                                                                class="btn btn-primary">Check Rate<i
+                                                                                    class="las la-arrow-right"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        <div  id="3div" hidden></div>
+                                                        <div  id="4div" hidden></div>
+                                                        <div></div>
+                                                        <div id="saqla2"></div>
+
+                                                        <div id="saqla" hidden> </div>
+
+
+
+
+                                                        </div>
+
+                                                        <div id="companies">
+
+
+
+
+                                                        </div>
+
+
+
+
+                                                </div>
+
+
+                                                <div class="image">
+                                                    <div class="image-container">
+                                                        <img src="./img/worl.jpg" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                            <div id="umumiy_massa" hidden></div>
+                        <section>
+                            <h3 class="et-highlight-title "
+                                style="font-size:20px;font-weight:700;color:#000000; padding-top: 30px; padding-left: 10px;"
+                                data-mobile-font="16px" data-tablet-font="16px">Dimensional Weight Calculation</h3>
+
+                            <div style="padding-top: 20px; padding-left: 10px;">
+                                <h2><strong>Terms and Conditions</strong></h2>
+                                <h4>1. Introduction</h4>
+                                1. Introduction
+
+                                1.1 www.worldel is owned by Worldel LLC.
+
+                                1.2 You can access your order details and these Terms and
+                                Conditions at any time on-line from our website but we
+                                recommend
+                                that you store a copy of these terms on your computer or
+                                device
+                                for your reference offline.
+
+                                1.3 We reserve the right to change these Terms and
+                                Conditions
+                                from time to time without prior notice to you. Any change
+                                will
+                                not affect the provision of Services in relation to any
+                                order
+                                that you place or Goods that we receive on your behalf from
+                                a
+                                Supplier before that change is implemented.
+                                <h4>2. Registration</h4>
+
+                                2.1 You must read, agree with and accept all of the Terms
+                                and
+                                Conditions and the Privacy Policy, which include those terms
+                                of
+                                use expressly set out below and those incorporated by
+                                reference,
+                                before you may register to become a User.
+
+                                2.2 We strongly recommend that, as you read these Terms and
+                                Conditions, you also access and read the information
+                                contained
+                                in the website pages
+
+                                2.3 Services are available only to, and may only be used by
+                                individuals who can form legally binding contracts under
+                                applicable law. Without limiting the foregoing, our Services
+                                are
+                                not available to children (persons under the age of 18).
+
+                                2.4 If you are registering as a business entity, you
+                                represent
+                                that you have the authority to bind the entity to this
+                                Agreement.
+
+                                2.5 Upon successful registration, User shall be allocated a
+                                China. address which the User may then provide to China
+                                on-line
+                                Suppliers as a delivery address (“Turkey Delivery Address”)
+                                when
+                                purchasing Goods.
+                                <h4>3. Using the Services</h4>
+                                3. Using the Services
+
+                                3.1 User acknowledges and agrees that the services do not
+                                include customs or taxes (except where clearly stated) and
+                                that
+                                we are not a customs agent or broker. We are solely
+                                responsible
+                                for the export of its Goods. The user is solely responsible
+                                for
+                                the payment of any and all customs, duties, tariffs, taxes,
+                                or
+                                other charges or fees of any nature relating to the
+                                shipment.
+
+                                3.3 It is your responsibility to ensure that any
+                                manufacturer’s
+                                warranty is available and valid in the country that you are
+                                based.
+
+                                3.4 By placing an order with us or using our service, you
+                                agree
+                                that the Goods have been purchased from a Supplier that is
+                                authorised to sell the Goods in the country that you are
+                                based.
+
+                                3.5 It is a must for you to use the China Delivery Address
+                                as
+                                the address when placing an order directly with the
+                                Supplier.
+
+                                3.6 You authorise us to accept delivery of Goods at the
+                                China
+                                Delivery Address on your behalf and appoint us as your
+                                freight
+                                agent to ship the Goods to the Shipment Address in
+                                accordance
+                                with these Terms and Conditions.
+
+                                3.7 We will charge you fees for using our services unless
+                                stated
+                                otherwise. We will also charge you a fee for us to arrange
+                                shipment, which is included in the shipping cost. Fees are
+                                subject to change from time to time at our discretion.
+
+                                3.8 We have the right to open and inspect the Goods we
+                                receive
+                                without prior notice to User. You also agree that if we
+                                decided
+                                to inspect the Goods, we may have to break the seals and
+                                open
+                                packages on some Goods. We do not accept any liability for
+                                any
+                                damage caused as a result unless it is directly due to our
+                                negligence.
+                            </div>
+                        </section>
+                        </section>
+                    </div>
+                    <!-- post end -->
+                    <div id="comments" class="post-comments-area">
+                    </div>
+                </div>
+            </div>
+            <!-- content end -->
+        </div>
+    </div>
+    <!-- wrap end -->
+    </div>
+    <footer class="bg-light text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998;" href="#!"
+                    role="button"><i class="fab fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #55acee;" href="#!"
+                    role="button"><i class="fab fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #dd4b39;" href="#!"
+                    role="button"><i class="fab fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #ac2bac;" href="#!"
+                    role="button"><i class="fab fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #0082ca;" href="#!"
+                    role="button"><i class="fab fa-linkedin-in"></i></a>
+                <!-- Github -->
+                <a class="btn btn-primary btn-floating m-1" style="background-color: #333333;" href="#!"
+                    role="button"><i class="fab fa-github"></i></a>
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3 bg-dark" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-white" target="_blank" href="http://worldel.uz/">WORLDEL.uz</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <script src="{%   static   "js/script.js"   %}"></script>
+    <script src="{%   static   "js/main.js"   %}"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
+
+</body>
+
+</html>
+<!-- Page generated by LiteSpeed Cache 4.4.7 on 2022-01-30 17:11:27 -->
